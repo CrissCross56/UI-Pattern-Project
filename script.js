@@ -1,30 +1,43 @@
 
-let test = 2;
-const baseString = `the incrementing numbers value is at ${test}`;
 console.log(baseString);
-console.log("aaaaaa");
-test+=3;
-console.log(baseString);
+//have diff strings for the diff family members
+const rick = 'rick';
+const morty = 'morty';
+const summer = 'summer';
+const jerry = 'jerry';
+const beth = 'beth';
+//have one here for mr poopy butthole
 
-let currentURL = `https://xkcd.com/info.0.json `;
-let firstURL = `https://xkcd.com/1/info.0.json`;
-let iteration = 1;
-let iterativeURL = `https://xkcd.com/${iteration}/info.0.json`;
+                                    //                             V   put variables for name placeholders in here
+let currentURL = `https://rickandmortyapi.com/api/character/?name=${}`;
 
-//get the num of the current comic and store it so that way our iteration can never grow greater than that 
 
-//set up several fetch requests
+//have a function to determine what goes inside the template literal
+function userChoice(input){
 
-//
+    switch (input) {
+        case value:
+            
+            break;
+    
+        default:
+            break;
+    }
 
-fetch(baseURL)
-.then(res => {
-    return res.json
-})
-.then(response => {
+    return;
+}
+
+let firstSeason = [];
+//get the first 11 eps from the api
+fetch(currentURL)
+  .then((res) => {
+    return res.json();
+  })
+  .then((response) => {
     //code goes here
-    console.log('were getting here');
-})
-.catch(err => {
+    console.log("were getting here");
+    console.log(response);
+  })
+  .catch((err) => {
     //will throw an error for us if something goes wrong
-})
+  });
